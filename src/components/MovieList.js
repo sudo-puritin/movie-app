@@ -4,10 +4,8 @@ import PropTypes from "prop-types";
 import "./Components.css";
 
 import tmdbApi, { category } from "../api/tmdbApi";
-import apiConfig from "../api/apiConfig";
 
 import { SwiperSlide, Swiper } from "swiper/react";
-import { Link } from "react-router-dom";
 import MovieCard from "./MovieCard";
 
 const MovieList = (props) => {

@@ -4,7 +4,6 @@ import "./Components.css";
 import { useParams } from "react-router-dom";
 import tmdbApi from "../api/tmdbApi";
 import apiConfig from "../api/apiConfig";
-import { initial } from "lodash";
 
 const VideoList = (props) => {
   const { category } = useParams();
@@ -14,7 +13,6 @@ const VideoList = (props) => {
   useEffect(() => {
     const getVideos = async () => {
       const res = await tmdbApi.getVideos(category, props.id);
-      console.log("🚀 Puritin ~ getVideos ~ res:", res);
       setVideos(res.results.slice(0, 5));
     };
     getVideos();
