@@ -39,27 +39,26 @@ const LoginPage = () => {
         className="loginHeader"
         style={{ backgroundImage: `url("assets/WallpaperDog-20493433.jpg")` }}
       ></div>
-      <FormProvider
-        methods={methods}
-        className="formWrapper"
-        onSubmit={handleSubmit}
-      >
-        <Typography className="titleLogin" variant="h3" mb={3}>
-          Sign In
-        </Typography>
 
-        <div className="userDataContent">
-          <label>
-            Username: <input name="username" type="text" />
-          </label>{" "}
-          <label>
-            Password: <input name="password" type="password" />
-          </label>{" "}
-        </div>
-        <button className="btnLogin" type="submit">
-          Login
-        </button>
-      </FormProvider>
+      <div className="formWrapper">
+        <FormProvider methods={methods} onSubmit={handleSubmit}>
+          <Typography className="titleLogin" variant="h3" mb={3}>
+            Sign In
+          </Typography>
+
+          <div className="userDataContent">
+            <label>
+              Username: <input name="username" type="text" />
+            </label>{" "}
+            <label>
+              Password: <input name="password" type="password" />
+            </label>{" "}
+          </div>
+          <button className="btnLogin" type="submit">
+            Login
+          </button>
+        </FormProvider>
+      </div>
     </>
   );
 };

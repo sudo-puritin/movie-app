@@ -18,9 +18,9 @@ body {
   z-index: -1;
 }
 .formWrapper {
-  background-color: #313131;
-  width: 450px;
-  border-radius: 20px;
+  background-color: rgba(31, 31, 31, 0.8);
+  border-radius: 15px;
+  padding: 30px;
   display: flex;
   flex-direction: column;
   box-shadow: 0 15px 30px rgba(225, 0, 0, 0.3);
@@ -34,12 +34,12 @@ body {
 .formWrapper .titleLogin {
   text-align: center;
   font-weight: 700;
-  margin-top: 20px;
   margin-bottom: 10px;
 }
 
 .userDataContent {
   font-size: 1.2rem;
+  font-weight: 600;
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -57,7 +57,7 @@ body {
 
 .btnLogin {
   width: 150px;
-  margin-top: 30px;
+  margin-top: 15px;
   margin-left: 10px;
   font-size: 1.2rem;
   font-weight: 600;

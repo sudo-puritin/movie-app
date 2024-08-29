@@ -14,20 +14,13 @@ import {
 } from "@mui/material";
 import LogoutIcon from "@mui/icons-material/Logout";
 
-import { Link, Navigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import useAuth from "../hooks/useAuth";
 
 const MainHeader = () => {
-  // const { isAuthenticated} = useAuth();
-
-  let auth = useAuth();
-
-  function onClickLogout() {
-    auth.logout(() => {
-      Navigate("/login", { replace: true });
-    });
-  }
+  const auth = useAuth();
+  let navigate = useNavigate();
 
   return (
     <Box
@@ -119,7 +112,9 @@ const MainHeader = () => {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               color="inherit"
-              onClick={onClickLogout}
+              onClick={() => {
+                auth.logout(() => navigate("/"));
+              }}
             >
               |
               <LogoutIcon />
